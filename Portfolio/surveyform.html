@@ -14,30 +14,32 @@
     <fieldset>
       <label id="name-label">Name: <input id="name" name="name" type="text" placeholder="Nome e sobrenome" required></label>
       <label id="email-label">Email: <input id="email" name="email" type="email" placeholder="meuemail@dominio.com" required></label>
-      <label id="number-label">Número: <input id="number" name="number" type="number" min="11" max="11" placeholder="(xx) 9xxxx-xxxx"></label>
+      <label id="number-label">Número: <input id="number" name="number" type="number" min="11" max="11" pattern="[0-9]{11}" placeholder="(xx) 9xxxx-xxxx"></label>
     </fieldset>
     <fieldset>
       <legend>How did you meet us?</legend>
-      <select id="dropdown">
-      <!--colocar as duas opções-->
+      <select id="dropdown" name="dropdown">
+      <option value="">Select one</option>
+      <option value="1">opção 1</option>
+      <option value="2">opção 2</option>
       </select>
     </fieldset>
     <fieldset>
       <legend>Dados Radio</legend>
-      <label><input id="opcao1" name="dadosradio" type="radio"> Opção 1</label>
-      <label><input id="opcao2" name="dadosradio"type="radio"> Opção 2</label>
+      <label for="opcao1"><input id="opcao1" name="dadosradio" type="radio" value="1"> Opção 1</label>
+      <label for="opcao2"><input id="opcao2" name="dadosradio"type="radio" value="2"> Opção 2</label>
     </fieldset>
     <fieldset>
       <legend>Checkbox</legend>
-      <label><input id="fulana" name="fulana" type="checkbox" value="1"> Fulana</label>
+      <label><input id="fulana" name="fulana" type="checkbox" value="1" checked> Fulana</label>
       <label><input id="ciclana" name="ciclana" type="checkbox" value="2"> Ciclana</label>
       <label><input id="beltrana" name="beltrana" type="checkbox" value="3"> Beltrana</label>
       <label><input id="zuleide" name="zuleide" type="checkbox" value="4"> Zuleide</label>
     </fieldset>
     <fieldset>
       <legend>Suggestions?</legend>
-      <input id="suggestions" name="suggestions" type="textarea" rows="5" cols="30">
+     <textarea rows="3" cols="30" placeholder="Escreva aqui.."></textarea>
     </fieldset>
-    <input id="submit" value="submit">
+    <input id="submit" type="submit" value="submit">
   </form>
 </body>
